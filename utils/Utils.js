@@ -27,7 +27,7 @@ const Utils = {
   // BASE_URL: "http://sdg.gov.mn/surveyservice/webservice.svc",
   // BASE_URL: "http://66.181.167.87/surveyservice/webservice.svc",
   // BASE_URL: "http://202.131.245.67/api/v1",
-  BASE_URL: "http://survey-api.app.nso.mn/api/v1",
+  BASE_URL: "https://survey1212.nso.mn/api",
   LOGO: LOGO,
   food: food,
   dinner: dinner,

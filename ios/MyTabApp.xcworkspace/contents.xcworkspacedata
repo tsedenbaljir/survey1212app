@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:MyTabApp.xcodeproj">
+      location = "group:/Users/neo/project/Survey1212/ios/Survey 1212.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

@@ -138,8 +138,8 @@ export default class LoginScreen extends Component {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            userId: "032401",
-            userPassword: "603002",
+            userId: this.state.username,
+            userPassword: this.state.userpassword,
           }),
         })
           .then((response) => response.json())

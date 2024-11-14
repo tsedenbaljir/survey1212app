@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Week, WeekName } from "../libs/Week";
 import { View, ScrollView, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import moment from 'moment';
 
 export default class Tabs extends Component {
   render() {
@@ -40,22 +41,26 @@ export default class Tabs extends Component {
 
     return (
       <ScrollView horizontal style={styles.container}>
+        <Text>
+          {startingDate}-
+          {moment(startingDate).day()}
+        </Text>
         {Week(startingDate).map((vDay, i) => {
           let day = vDay.day === 0 ? 7 : vDay.day;
           return (
             <TouchableOpacity key={i} onPress={() => handleChangeTab(day, i, WeekName(day))}>
               <Text style={styles.textDate}>
                 {vDay.date}
-                </Text>
+              </Text>
               <View style={[styles.text, {
                 backgroundColor: state.initTab === i ? "#e1f2ff" : "#005baa",
               }]}>
                 <Text style={[styles.textWeek, {
-                fontWeight: "bold",
-                color: state.initTab === i ? "#005baa" : "white"
-              }]}>
-                {WeekName(day)}
-              </Text>
+                  fontWeight: "bold",
+                  color: state.initTab === i ? "#005baa" : "white"
+                }]}>
+                  {WeekName(day)}
+                </Text>
               </View>
             </TouchableOpacity>
           );

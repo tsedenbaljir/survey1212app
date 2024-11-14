@@ -64,7 +64,7 @@ export default class Survey extends Component {
     const { navigation } = this.props;
     this.setState({ loading: true });
 
-    await fetch(`${Utils.BASE_URL}/surveys`, {
+    await fetch(`${Utils.BASE_URL}/survey`, {
       method: 'GET',
       headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
     })
@@ -76,12 +76,12 @@ export default class Survey extends Component {
             surveys: res.data,
           })
         } else {
-          alert(res.message);
+          Alert.alert(res.message);
         }
       })
       .catch((error) => {
         this.setState({ loading: false });
-        alert(`f_getusersurveydata: ${error}`);
+        Alert.alert(`f_getusersurveydata: ${error}`);
       });
   }
 

@@ -9,7 +9,9 @@ export function Week(startingDate) {
     { date: moment(startingDate).add(4, "day").format("MM/DD"), day: moment(startingDate).add(4, "day").day() },
     { date: moment(startingDate).add(5, "day").format("MM/DD"), day: moment(startingDate).add(5, "day").day() },
     { date: moment(startingDate).add(6, "day").format("MM/DD"), day: moment(startingDate).add(6, "day").day() }
-  ]
+  ];
+  console.log(week);
+  console.log(startingDate);
   return week
 }
 

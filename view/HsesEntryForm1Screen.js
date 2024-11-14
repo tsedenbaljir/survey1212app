@@ -57,8 +57,8 @@ export default class HsesEntryForm1Screen extends Component {
       let dayId = day == 0 ? 7 : day;
       this.setState({
         initTab: 0,
-        startingDate: moment(user.startingDate),
-        selectedDate: moment(user.startingDate),
+        startingDate: user.startingDate,
+        selectedDate: user.startingDate,
         dayId: dayId, hhId: user.id, verify: user.verify
       }, () => {
         this.getData(this.state.hhId, this.state.dayId)
